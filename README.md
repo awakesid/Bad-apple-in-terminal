@@ -19,16 +19,30 @@ min intensity=' '
 
 ### Things to be considered
 1) Resize the image(image of higher resolution takes huge canvas to render and it also takes much space and memory, so to solve this problem we need to scale down the image). Just multiply width and height with 0.1 or 0.2,0.3,0.4 depending on the size of image
-2)After these all step also, the ascii art is not satisfying and this due to vertical elongation.
+
+
+2) After these all step also, the ascii art is not satisfying and this due to vertical elongation.
+
 ![image](assets/asset2.png)
+
  Each pixel size is square but each character size is rectangle having height greater than width while rendering text in the terminal which causes the vertical elongation.
-![image](assets/aasset1.png)
+
+![image](assets/asset1.png)
+
 The following problem can solved by converting resized image into horizontal elongated image. This can be achieved by simple maths proportions. We need to multiply resized height by ratio of width/height of obtained renderd from terminal. And that ratio is same as width/height of single character. So we can use it directly elongate the image. After this step we can get desired result.
+
 ![image](assets/asset3.png)
 
 ## STEP 3
 This step can be easily achieved. We can use `os` and `time` module to render each frame in terminal
 and 10 frames persecond.
+---
+![image](assets/asset6.png)
+---
+![image](assets/asset5.png)
+---
+![image](assets/asset4.png)
+
 
 
 
